@@ -9,6 +9,8 @@
 <title>DashBoard</title>
 </head>
 <body>
-	<h1>Dash Board</h1>
+	<h1>Congrats. You're here. Now Get OFF.</h1>
+	
+	<a href="/users/logout">Logout</a>
 </body>
 </html>

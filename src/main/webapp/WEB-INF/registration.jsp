@@ -11,7 +11,7 @@
 <body>
 	<h1>Registration:</h1>
 	<div class = "body">
-		<form:form action="/user/register" method="POST" modelAttribute="user">
+		<form:form action="/users/registration" method="POST" modelAttribute="user">
 		<p><form:errors path="firstName"></form:errors></p>
 		<p>
 			<form:label path="firstName">First Name: </form:label>
@@ -24,6 +24,10 @@
 			<form:input path="lastName"></form:input>
 		</p>
 		
+		<c:if test="${emailMatchError != null}" >
+			<p class="error">${emailMatchError}</p>				
+		</c:if>
+		
 		<p><form:errors path="email"></form:errors></p>
 		<p>
 			<form:label path="email">Email: </form:label>
@@ -35,6 +39,10 @@
 			<form:label path="age">Age: </form:label>
 			<form:input path="age"></form:input>
 		</p>
+		
+		<c:if test="${passwordMatchError != null}" >
+			<p class="error">${passwordMatchError}</p>				
+		</c:if>
 		
 		<p><form:errors path="password"></form:errors></p>
 		<p>

@@ -11,7 +11,7 @@
 <body>
 	<h1>Login</h1>
 	<div class = "body">
-		<form:form action="/user/login" method="POST" modelAttribute="user">
+		<form:form action="/users/login" method="POST" modelAttribute="user">
 		<p><form:errors path="email"></form:errors></p>
 		<p>
 			<form:label path="email">Email: </form:label>
@@ -23,6 +23,10 @@
 			<form:label path="password">Password: </form:label>
 			<form:input path="password"></form:input>
 		</p>
+		
+		<c:if test="${loginError != null}" >
+			<p class="error">${loginError}</p>				
+		</c:if>
 		
 		<input type = "submit" value = "Register"/>
 	</form:form>
