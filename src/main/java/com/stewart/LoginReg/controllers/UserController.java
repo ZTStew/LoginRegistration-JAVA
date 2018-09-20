@@ -21,8 +21,19 @@ public class UserController {
 	}
 	
 	@GetMapping("")
+	public String dash() {
+		return "dashboard.jsp";
+	}
+	
+	@GetMapping("/registration")
 	public String register(@ModelAttribute("user") User user, Model model) {
 		model.addAttribute("user", user);
 		return "registration.jsp";
+	}
+	
+	@GetMapping("/login")
+	public String login(@ModelAttribute("user") User user, Model model) {
+		model.addAttribute("user", user);
+		return "login.jsp";
 	}
 }

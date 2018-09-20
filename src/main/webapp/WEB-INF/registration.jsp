@@ -50,6 +50,7 @@
 		
 		<input type = "submit" value = "Register"/>
 	</form:form>
+	<a href = "/users/login">To Login</a>
 	</div>
 </body>
 </html>
