@@ -11,25 +11,17 @@
 <body>
 	<h1>Login</h1>
 	<div class = "body">
-		<form:form action="/users/login" method="POST" modelAttribute="user">
-		<p><form:errors path="email"></form:errors></p>
-		<p>
-			<form:label path="email">Email: </form:label>
-			<form:input path="email"></form:input>
-		</p>
+		<form action="/users/login" method="POST" >
 		
-		<p><form:errors path="password"></form:errors></p>
-		<p>
-			<form:label path="password">Password: </form:label>
-			<form:input path="password"></form:input>
-		</p>
+		<p><input type="text"  name="email" placeholder="Email" /></p>
+		<p><input type="password" name="password" placeholder="Password" /></p>
 		
 		<c:if test="${loginError != null}" >
 			<p class="error">${loginError}</p>				
 		</c:if>
 		
-		<input type = "submit" value = "Register"/>
-	</form:form>
+		<input type = "submit" value = "Login"/>
+	</form>
 	<a href = "/users/registration">To Registration</a>
 	</div>
 </body>

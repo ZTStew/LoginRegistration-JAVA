@@ -72,9 +72,11 @@ public class UserController {
 	
 	@PostMapping("/login")
 	public String loginCheck(@RequestParam("email") String email,@RequestParam("password") String password, Model model, HttpSession session) {
+		System.out.println(email.length());
+		System.out.println(password.length());
 		if(email.length() < 3) {
 			model.addAttribute("loginError","Invalid Credentials.");
-//			model.addAttribute("user",new User());
+//			model.addAttribute("user",new user());
 			return "login.jsp";
 		}
 		if(password.length() < 8) {
