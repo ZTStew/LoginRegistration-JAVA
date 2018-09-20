@@ -1,6 +1,6 @@
 package com.stewart.LoginReg.services;
 
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -22,8 +22,9 @@ public class UserService {
 	}
 	
 //	R - Read
-	public List<User> findAllUsers(){
-		return userRepo.findAllUsers();
+
+	public ArrayList<User> findAllUsers(){
+		return (ArrayList<User>) userRepo.findAll();
 	}
 	
 	public User findUserById(Long id) {

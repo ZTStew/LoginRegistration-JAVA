@@ -9,7 +9,7 @@ import com.stewart.LoginReg.models.User;
 
 public interface UserRepository extends CrudRepository<User,Long> {
 	User findByEmail(String email);
-	List<User> findAllUsers();
+	List<User> findAll();
 	Optional<User> findUserById(Long id);
 	
 }
