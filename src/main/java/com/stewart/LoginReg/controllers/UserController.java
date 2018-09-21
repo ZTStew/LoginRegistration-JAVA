@@ -76,7 +76,7 @@ public class UserController {
 		System.out.println(password.length());
 		if(email.length() < 3) {
 			model.addAttribute("loginError","Invalid Credentials.");
-//			model.addAttribute("user",new user());
+			model.addAttribute("user",new User());
 			return "login.jsp";
 		}
 		if(password.length() < 8) {
@@ -88,7 +88,7 @@ public class UserController {
 		
 		if(us == null) {
 			model.addAttribute("loginError","Invalid Credentials!");
-//			model.addAttribute("user",new User());
+			model.addAttribute("user",new User());
 			return "login.jsp";	
 		} else {
 			boolean matches = BCrypt.checkpw(password,us.getPassword());
@@ -99,7 +99,7 @@ public class UserController {
 				return "redirect:/users";
 			} else {
 				model.addAttribute("loginError","Invalid Credentials!");
-//				model.addAttribute("user",new User());
+				model.addAttribute("user",new User());
 				return "login.jsp";
 			}
 		}

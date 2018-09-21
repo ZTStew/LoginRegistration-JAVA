@@ -51,7 +51,7 @@ public class User {
 	@PreUpdate
 	public void OnUpdate() { updatedAt = new Date(); }
 	
-	private User() {}
+	public User() {}
 	
 	
 	public Long getId() {
